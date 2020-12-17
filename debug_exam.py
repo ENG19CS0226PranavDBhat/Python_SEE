@@ -31,12 +31,11 @@ dictionary and data2 is a list where
 each key-value pair in data2 is also
 a list [key, value] of length 2.
 '''
-
 def uniqueUpdate(data1, data2):
     # Initially empty dictionary
     dupKeys = {}
 
-    # Examine every (k, v2) pair in data2
+   # Examine every (k, v2) pair in data2
     for [k, v2] in data2:
         # Check if there is a key-value
         # pair with key = k in data1
@@ -50,9 +49,9 @@ def uniqueUpdate(data1, data2):
                 dupKeys[k] = [v1, v2]
                 # Remove (k, v1) from data1
                 del data1[k]
-            else:
-                # Add (k, v2) to data1
-                data1[k] = v2
+         else:
+             # Add (k, v2) to data1
+             data1[k] = v2
     # After processing all (k, v2) in
     # data2, return the dictionary
     return dupKeys
